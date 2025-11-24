@@ -43,9 +43,12 @@ const nav = document.getElementById('navbar');
 const links = document.querySelectorAll('.nav-link');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
+    if (window.scrollY > 50) 
+    {
         nav.classList.add('scrolled');
-    } else {
+    } 
+    else 
+    {
         nav.classList.remove('scrolled');
     }
     
@@ -55,14 +58,16 @@ window.addEventListener('scroll', () => {
     allSections.forEach(sec => {
         const top = sec.offsetTop;
         
-        if (window.scrollY >= top - 150) {
+        if (window.scrollY >= top - 150) 
+        {
             active = sec.getAttribute('id');
         }
     });
     
     links.forEach(l => {
         l.classList.remove('active');
-        if (l.getAttribute('href') === `#${active}`) {
+        if (l.getAttribute('href') === `#${active}`) 
+        {
             l.classList.add('active');
         }
     });
@@ -105,7 +110,8 @@ links.forEach(l => {
         const target = l.getAttribute('href');
         const section = document.querySelector(target);
         
-        if (section) {
+        if (section) 
+        {
             const offset = section.offsetTop - 80;
             window.scrollTo({
                 top: offset,
@@ -118,9 +124,12 @@ links.forEach(l => {
 const topBtn = document.getElementById('scroll-top');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 500) {
+    if (window.scrollY > 500) 
+    {
         topBtn.classList.add('show');
-    } else {
+    } 
+    else 
+    {
         topBtn.classList.remove('show');
     }
 });
@@ -139,7 +148,8 @@ const opts = {
 
 const obs = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting) 
+        {
             entry.target.style.opacity = '1';
             entry.target.style.transform = 'translateY(0)';
         }
